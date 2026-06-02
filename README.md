@@ -43,7 +43,7 @@ W potoku wykorzystano narzędzie `docker/metadata-action`, które automatycznie 
 * **Źródło:** *[Docker Docs - Dockerfile Best Practices: Tags](https://docs.docker.com/build/building/best-practices/)* oraz *[GitOps Principles (Weaveworks)](https://www.weave.works/technologies/gitops/)*.
 
 ### 2. Zarządzanie warstwami cache w DockerHub
-Dane pamięci podręcznej są eksportowane do zewnętrznego repozytorium na DockerHub ze specjalnym tagiem `buildcache` (rejestr `[TWÓJ_LOGIN_DOCKERHUB]/zadanie2-cache:buildcache`).
+Dane pamięci podręcznej są eksportowane do zewnętrznego repozytorium na DockerHub ze specjalnym tagiem `buildcache` (rejestr `alexmel7/zadanie2-cache:buildcache`).
 
 * **Uzasadnienie oddzielenia cache:** Wydzielenie warstw pamięci podręcznej do osobnego rejestru zapobiega "zaśmiecaniu" głównego rejestru produkcyjnego (GHCR). Dzięki temu użytkownicy pobierający obraz widzą tylko gotowe, wydane wersje aplikacji.
 * **Uzasadnienie `mode=max`:** Zastosowano eksporter z opcją `mode=max`. W przeciwieństwie do trybu `min`, tryb `max` zapisuje w cache nie tylko warstwy ostatecznego obrazu, ale również wszystkie warstwy pośrednie ze wszystkich etapów budowania (tzw. obrazy typu "builder"). Biorąc pod uwagę emulację architektury ARM64 przez QEMU na maszynach AMD64, co jest procesem niezwykle obciążającym procesor, przywrócenie binarnych plików pośrednich drastycznie skraca czas wykonania kolejnych potoków CI.
