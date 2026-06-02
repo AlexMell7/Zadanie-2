@@ -54,3 +54,5 @@ Do weryfikacji bezpieczeństwa obrazu pod kątem luk CVE wybrano narzędzie **Tr
 
 * **Uzasadnienie wyboru:** Z perspektywy automatyzacji CI/CD w GitHub Actions, Trivy jest rozwiązaniem prostszym w implementacji (standalone binary/GitHub Action), które nie wymaga dodatkowej konfiguracji usług w chmurze ani logowania do środowisk Docker Scout w celu integracji polityk bezpieczeństwa. Działa w pełni lokalnie w runnerze, jest niezwykle szybkie i natywnie obsługuje przerywanie działania pipeline'u (`exit-code: '1'`) po znalezieniu podatności z określonego poziomu (w tym zadaniu `HIGH` lub `CRITICAL`).
 * **Źródło:** *[Trivy Documentation - CI/CD Integration](https://aquasecurity.github.io/trivy/)*.
+* <img width="1347" height="896" alt="image" src="https://github.com/user-attachments/assets/886f7914-610f-4273-a6ea-0c81252b5758" />
+
