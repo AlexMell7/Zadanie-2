@@ -8,7 +8,7 @@
 ## Linki do repozytoriów obrazów i cache
 
 * **Gotowy obraz aplikacji (GHCR):** [https://github.com/AlexMell7/Zadanie-2/pkgs/container/zadanie-2](https://github.com/AlexMell7/Zadanie-2/pkgs/container/zadanie-2)
-* **Dane Cache (DockerHub):** [https://hub.docker.com/r/alexmell7/zadanie2-cache/tags](https://hub.docker.com/r/alexmell7/zadanie2-cache/tags)
+* **Dane Cache (DockerHub):** [https://hub.docker.com/r/alexmel7/zadanie2-cache/tags](https://hub.docker.com/r/alexmel7/zadanie2-cache/tags)
 
 ---
 
